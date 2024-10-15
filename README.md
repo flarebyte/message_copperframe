@@ -15,8 +15,10 @@ Highlights:
 
 -   Reactive Updates which notifies listeners when the message list
     changes, enabling efficient UI updates.
+
 -   Immutable State Checks that compares old and new messages to avoid
     unnecessary notifications.
+
 -   Easy Integration which works seamlessly with Flutter's ChangeNotifier
     for state management.
 
@@ -31,7 +33,7 @@ final CopperframeMessagesHolder holder = CopperframeMessagesHolder();
 Create a message:
 
 ```dart
-final  infoMessage  =  CopperframeMessage(  label:  'This  is  an  info 
+final  infoMessage  =  CopperframeMessage(  label:  'This  is  an  info
 message',  level:  CopperframeMessageLevel.info,  category:  'usage',  );
 ```
 
