@@ -1,7 +1,7 @@
 name: message_copperframe
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "Delivering impactful messages to your dashboard"
+version: 0.3.0
+homepage: https://github.com/flarebyte/message_copperframe
 
 environment:
   sdk: ^3.4.4
