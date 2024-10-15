@@ -4,23 +4,43 @@
 
 > Delivering impactful messages to your dashboard
 
-Delivering impactful messages to your dashboard
+Manages a list of message objects and notifies listeners when the message
+list changes. This is useful for maintaining reactive state in Flutter
+applications, ensuring UI components can respond to message updates
+efficiently.
 
 ![Hero image for message\_copperframe](doc/message_copperframe.jpeg)
 
 Highlights:
 
--   The slot can be described by a title, description, prominence or status
--   Every time the slot is modified a notification is sent
--   A registry allow to modify multiple slots at once
+-   Reactive Updates which notifies listeners when the message list
+    changes, enabling efficient UI updates.
+
+-   Immutable State Checks that compares old and new messages to avoid
+    unnecessary notifications.
+
+-   Easy Integration which works seamlessly with Flutter's ChangeNotifier
+    for state management.
 
 A few examples:
 
-Create a new slot class:
+Create a message holder:
 
 ```dart
-class InfoMessageSlot extends CopperframeSlotBase { InfoMessageSlot({
-required super.tags,});}
+final CopperframeMessagesHolder holder = CopperframeMessagesHolder();
+```
+
+Create a message:
+
+```dart
+final  infoMessage  =  CopperframeMessage(  label:  'This  is  an  info
+message',  level:  CopperframeMessageLevel.info,  category:  'usage',  );
+```
+
+Update the message holder and notify:
+
+```dart
+holder.messages = [infoMessage]
 ```
 
 ## Documentation and links
